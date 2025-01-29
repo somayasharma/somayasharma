@@ -62,6 +62,56 @@
     margin-top: 20px;
     line-height: 1.6; /* Improve line spacing */
 }
+			#floating-socials {
+    position: fixed;
+    top: 50%; /* Position vertically centered */
+    left: 20px; /* Position slightly from the left edge */
+    transform: translateY(-50%); /* Adjust to truly center vertically */
+    z-index: 1000; /* Ensure they appear on top of content */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between the icons */
+}
+
+#floating-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Icon size */
+    height: 50px; /* Icon size */
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    text-decoration: none;
+}
+
+#floating-socials a:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    background-color: #f0f0f0;
+}
+
+#floating-socials i {
+    font-size: 20px; /* Icon size */
+    color: #333; /* Default icon color */
+}
+
+#floating-socials a:hover i {
+    color: #0077b5; /* Change to brand color on hover */
+}
+
+/* Brand-specific hover colors */
+#floating-socials a:nth-child(1):hover i {
+    color: #000; /* GitHub black */
+}
+
+#floating-socials a:nth-child(2):hover i {
+    color: #0e76a8; /* LinkedIn blue */
+}
+
+#floating-socials a:nth-child(3):hover i {
+    color: #d44638; /* Email red */
+}
 			/* Universal Heading Style */
 h2 {
     font-size: 2rem; /* Adjust to match the desired size */

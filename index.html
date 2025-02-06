@@ -35,33 +35,53 @@
 				justify-content: center;
 				height: calc(100vh - 100px); /* Adjust height to move content upward */
 			}
-			.project-section {
-    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background like in the image */
-    padding: 50px 20px; /* Space around the section */
-    color: #ffffff; /* White text for contrast */
-    border-radius: 20px; /* Rounded corners */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for elevation */
+			/* Improve Project Section Layout */
+.project-section {
+    background: #f8f9fa; /* Light background for contrast */
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; /* Space between projects */
+    text-align: center;
 }
 
+/* Ensure consistent heading styling */
 .project-section h2 {
-    font-size: 2.5rem; /* Adjust heading size */
-    margin-bottom: 20px; /* Space below the heading */
-    font-weight: bold; /* Make the heading prominent */
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
-.dashboard-image {
-    max-width: 100%;
+/* Make projects container more structured */
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ensure Tableau dashboards are responsive */
+.tableauPlaceholder {
+    width: 100%; /* Full width */
+    max-width: 800px; /* Limit max width */
     height: auto;
-    border-radius: 10px; /* Rounded corners for the image */
-    margin: 20px 0; /* Space around the image */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow for the image */
+    margin: 0 auto; /* Center the dashboard */
 }
 
-.project-section p {
-    font-size: 1.2rem; /* Adjust font size for better readability */
-    margin-top: 20px;
-    line-height: 1.6; /* Improve line spacing */
+/* Fix spacing between projects */
+#section-featurettes {
+    padding: 40px 20px;
 }
+
+/* Mobile Fix: Adjust dashboards for smaller screens */
+@media (max-width: 768px) {
+    .tableauPlaceholder {
+        max-width: 100%;
+        height: 400px; /* Reduce height on mobile */
+    }
+}
+
 			#floating-socials {
     position: fixed;
     top: 50%; /* Position vertically centered */
@@ -319,7 +339,7 @@ section {
         <div style="text-align: center; margin-bottom: 20px;">
             <h2 style="font-size: 2rem; font-weight: bold;">Amazon Sales Dashboard</h2>
         </div>
-        <div class="tableauPlaceholder" id="viz1738003497877" style="width: 80%; height: 600px; margin: 0 auto; position: relative;">
+        <div class="tableauPlaceholder" id="viz1738003497877" style="width: 100%; max-width: 800px; height: auto; margin: 0 auto;">
             <noscript>
                 <a href="#">
                     <img alt="Dashboard 1" src="https://public.tableau.com/static/images/Am/AmazonDashboard_17378217871280/WelcomePage/1_rss.png" style="border: none;" />
@@ -342,18 +362,19 @@ section {
             </object>
         </div>
         <script type="text/javascript">
-            var divElement = document.getElementById('viz1738003497877');
-            var vizElement = divElement.getElementsByTagName('object')[0];
-            if (divElement.offsetWidth > 800) {
-                vizElement.style.width = '800px';
-                vizElement.style.height = '600px';
-            } else if (divElement.offsetWidth > 500) {
-                vizElement.style.width = '600px';
-                vizElement.style.height = '450px';
-            } else {
-                vizElement.style.width = '100%';
-                vizElement.style.height = '500px';
-            }
+          var divElement = document.getElementById('viz1738003497877');
+var vizElement = divElement.getElementsByTagName('object')[0];
+if (divElement.offsetWidth > 800) {
+    vizElement.style.width = '800px';
+    vizElement.style.height = '600px';
+} else if (divElement.offsetWidth > 500) {
+    vizElement.style.width = '600px';
+    vizElement.style.height = '450px';
+} else {
+    vizElement.style.width = '100%';
+    vizElement.style.height = '500px';
+}
+
             var scriptElement = document.createElement('script');
             scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
@@ -365,7 +386,7 @@ section {
     <div style="text-align: center; margin-bottom: 20px;">
         <h2 style="font-size: 2rem; font-weight: bold;">London Bike Rides</h2>
     </div>
-    <div class="tableauPlaceholder" id="viz1738002838382" style="width: 80%; height: 600px; margin: 0 auto; position: relative;">
+   <div class="tableauPlaceholder" id="viz1738003497877" style="width: 100%; max-width: 800px; height: auto; margin: 0 auto;">
         <noscript>
             <a href="#">
                 <img alt="Dashboard 1" src="https://public.tableau.com/static/images/Lo/LondonBikeRides_17379864597750/Dashboard1/1_rss.png" style="border: none;" />
@@ -388,18 +409,10 @@ section {
         </object>
     </div>
     <script type="text/javascript">
-        var divElement = document.getElementById('viz1738002838382');
-        var vizElement = divElement.getElementsByTagName('object')[0];
-        if (divElement.offsetWidth > 800) {
-            vizElement.style.width = '800px';
-            vizElement.style.height = '600px';
-        } else if (divElement.offsetWidth > 500) {
-            vizElement.style.width = '600px';
-            vizElement.style.height = '450px';
-        } else {
-            vizElement.style.width = '100%';
-            vizElement.style.height = '500px';
-        }
+     var divElement = document.getElementById('viz1738003497877');
+var vizElement = divElement.getElementsByTagName('object')[0];
+vizElement.style.width = '100%';
+vizElement.style.height = 'auto';
         var scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
         vizElement.parentNode.insertBefore(scriptElement, vizElement);

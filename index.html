@@ -138,6 +138,30 @@ section {
     border-radius: 10px; /* Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
+			.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Adjust spacing between skill cards */
+}
+
+.skill-card {
+    flex: 1 1 calc(50% - 30px); /* Two columns on medium screens */
+    background: #f8f9fa; /* Light background */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 200px;
+}
+
+/* Adjust layout for mobile */
+@media (max-width: 768px) {
+    .skill-card {
+        flex: 1 1 100%; /* Make each card full width on small screens */
+    }
+}
+
 
 
 		</style>
